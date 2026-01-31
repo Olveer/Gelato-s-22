@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*font-family: "Edu NSW ACT Hand Pre", cursive;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Edu+NSW+ACT+Hand+Pre:wght@400..700&display=swap');
+
+body {
+    font-family: "Edu NSW ACT Hand Pre", cursive;
+    text-align: center;
+}
+
+img {
+    width: 220px;
+    height: 350px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: rgb(3, 63, 63);
+    font-size: 2rem;
+    text-shadow: -7px 4px 4px rgba(181, 178, 224, 0.6);
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h2 {
+    text-align: center;
+    text-shadow: -1px 4px 13px rgba(255, 255, 255, 1);
+}
+
+/*header*/
+.logo {
+    margin: 10px;
+    width: 180px;
+    height: 180px;
+    padding: 5px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eff7c3e8;
+    width: 100%;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(41, 111, 68);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    font-size: 1.7rem;
+}
+
+nav {
+    width: 60%;
+    margin-right: 30px;
+}
+
+/*footer*/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eff7c3e8;
+    align-items: center;
+}
+
+footer img {
+    width: 80px;
+    height: auto;
+}
+
+/* grid del page helados */
+
+.migrid {
+    display: grid;
+    grid-template-areas:
+        "   tipos    tipos      tipos "
+        "    .       clasicos     .  "
+        "chocolate1  vainilla    fresa"
+        "    .       variados     .  "
+        "  cook      limon       ron  "
+        "   .        nuevos      .  "
+        "pistacho    almendras   menta"
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+
+}
+
+.tipos {
+    grid-area: tipos;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.clasicos {
+    grid-area: clasicos;
+    background-color: #00fd7ab8;
+}
+
+.fresa {
+    margin: 20px;
+    padding: 25px;
+    background-color: #e8aeae;
+    border-radius: 10px;
+    grid-area: fresa;
+}
+
+.vainilla {
+    margin: 20px;
+    padding: 25px;
+    background-color: rgb(255, 255, 182);
+    border-radius: 10px;
+    grid-area: vainilla;
+}
+
+.chocolate {
+    background-color: rgb(145, 145, 107);
+    margin: 20px;
+    padding: 25px;
+    grid-area: chocolate1;
+    border-radius: 10px;
+}
+
+.variados {
+    background-color: #F5D2D2;
+    grid-area: variados;
+}
+
+.limon {
+    background-color: #D9E542;
+    margin: 20px;
+    padding: 25px;
+    grid-area: limon;
+    border-radius: 10px;
+}
+
+.limon img {
+    height: 320px;
+    width: 200px;
+}
+
+.ron-pasas {
+    background-color: #45383b;
+    margin: 20px;
+    padding: 25px;
+    grid-area: ron;
+    border-radius: 10px;
+}
+
+.cookies-and-cream {
+    background-color: blanchedalmond;
+    margin: 20px;
+    padding: 25px;
+    grid-area: cook;
+    border-radius: 10px;
+}
+
+.nuevos {
+    grid-area: nuevos;
+    background-color: #D9E542;
+}
+
+.pistacho {
+
+    background-color: #628141;
+    margin: 20px;
+    padding: 25px;
+    grid-area: pistacho;
+    border-radius: 10px;
+}
+
+.almendras {
+    background-color: #EED9C4;
+    margin: 20px;
+    padding: 25px;
+    grid-area: almendras;
+    border-radius: 10px;
+
+}
+
+.menta {
+    background-color: #12d3d3;
+    margin: 20px;
+    padding: 25px;
+    grid-area: menta;
+    border-radius: 10px;
+}
+
+.precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fa3c23f4;
+}
+
+/* grid del index */
+
+.container-grid {
+
+    display: grid;
+    grid-template-areas:
+        "titulo      titulo     titulo"
+        "img-in      titulo1    titulo1"
+        "img-in      texto3     gela  "
+        "img-in      texto3      gela  "
+        "img-in     titulo2    titulo2";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    column-gap: 5px;
+    row-gap: 5px;
+    padding: 5px;
+}
+
+.container-grid img {
+    width: 100%;
+    height: 100%;
+}
+
+.gela {
+    grid-area: gela;
+    border-radius: 10px;
+}
+
+.texto3 {
+    grid-area: texto3;
+}
+
+.img-in {
+    grid-area: img-in;
+    border-radius: 10px;
+}
+
+.img-in1 {
+    grid-area: img-in1;
+}
+
+.titulo {
+    grid-area: titulo;
+
+}
+
+.titulo1 {
+    grid-area: titulo1;
+}
+
+.titulo2 {
+    grid-area: titulo2;
+}
+
+/* page de soporte */
+
+.formu {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    padding: 50px 55px;
+    margin: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    width: 440px;
+
+}
+
+.f {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.hf {
+    color: #283629;
+    font-size: 35px;
+
+}
+
+label {
+    color: #283629;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+
+}
+
+textarea,
+input {
+    padding: 17px 23px;
+    border-radius: 24px;
+    margin-bottom: 20px;
+    outline: none;
+    border: 2px solid #e7cbcb;
+    background-color: #ece3e3;
+}
+
+.carousel {
+    margin: 30px;
+    padding: 10px;
+
+}
+
+/* media queries */
+
+/* mobile */
+@media (max-width:480px) {
+    header {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    nav {
+        width: 70%;
+    }
+
+    ul {
+        font-size: small;
+
+    }
+
+    .container-grid {
+        display: grid;
+        grid-template-areas:
+            "titulo"
+            "titulo1"
+            "img-in"
+            "texto3"
+            "gela"
+            "titulo2";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+        column-gap: 5px;
+        row-gap: 5px;
+        padding: 5px;
+
+    }
+
+    footer {
+        font-size: small;
+    }
+
+    footer img {
+        width: 10%;
+    }
+
+    .migrid {
+        display: grid;
+        grid-template-areas:
+            "tipos"
+            "clasicos"
+            "chocolate1"
+            "fresa"
+            "vainilla"
+            "variados"
+            " cook "
+            "limon"
+            " ron"
+            " nuevos"
+            "pistacho"
+            "almendras"
+            "menta"
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto;
+
+    }
+
+    .tipos {
+        font-size: larger;
+    }
+
+    h2 {
+        font-size: large;
+    }
+
+    h3 {
+        font-size: medium;
+    }
+
+    .hf {
+        font-size: larger;
+    }
+
+    .f {
+        align-items: center;
+    }
+
+    form {
+        width: 310px;
+
+    }
+
+    textarea,
+    input {
+        padding: 8px;
+    }
+
+    .carousel-inner img {
+        height: 100%;
+    }
+
+}
