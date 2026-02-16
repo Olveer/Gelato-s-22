@@ -1,0 +1,147 @@
+//estilos exclusivos de main en index
+
+@use "../partials/variables" as*;
+/* page de index */
+
+.container-grid {
+
+
+
+    display: grid;
+    grid-template-areas:
+        "titulo      titulo     titulo"
+        "img-in      titulo1    titulo1"
+        "img-in      texto3     gela  "
+        "img-in      texto3      gela  "
+        "img-in     titulo2    titulo2"
+        ".   promo-in   . "
+        "arandanos    maracuya    coffe";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    column-gap: 5px;
+    row-gap: 5px;
+    padding: 5px;
+
+
+    img {
+        width: 95%;
+        height: 100%;
+    }
+
+
+    .titulo {
+        grid-area: titulo;
+    }
+
+
+    .titulo1 {
+        grid-area: titulo1;
+    }
+
+    .img-in {
+        grid-area: img-in;
+        border-radius: 10px;
+    }
+
+    .texto3 {
+        grid-area: texto3;
+    }
+
+    .gela {
+        grid-area: gela;
+        border-radius: 10px;
+    }
+
+    .titulo2 {
+        grid-area: titulo2;
+    }
+
+
+    .promo-in {
+        grid-area: promo-in;
+        background-color: rgb(239, 238, 239);
+        color: #DEB80B;
+        animation-name: efecto;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+
+        animation-delay: 2s;
+
+    }
+
+    @keyframes efecto {
+        0% {
+
+            color: #f07a25;
+            transform: translateX(10px);
+
+        }
+
+        25% {
+
+            color: #e27676;
+            transform: scaleX(1);
+
+        }
+
+        50% {
+
+            color: #ff0101;
+            transform: rotate(-10deg);
+
+        }
+
+        75% {
+            color: #e27676;
+            transform: translateY(10px);
+
+        }
+
+        100% {
+            color: #f07a25;
+            transform: rotate(10deg);
+
+        }
+
+    }
+
+    .arandanos {
+        @include tarjetah;
+        grid-area: arandanos;
+        background-color: #0C2340;
+
+        span {
+            @extend .boton-naranja;
+        }
+    }
+
+
+    .maracuya {
+        @include tarjetah;
+        grid-area: maracuya;
+        background-color: #DEB80B;
+
+
+        span {
+            @extend .boton-naranja;
+        }
+    }
+
+
+    .coffe {
+        @include tarjetah;
+        grid-area: coffe;
+        background-color: #6F4E37, ;
+
+        span {
+            @extend .boton-naranja;
+        }
+    }
+
+
+
+
+
+
+
+}

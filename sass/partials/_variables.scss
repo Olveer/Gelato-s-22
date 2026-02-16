@@ -1,0 +1,33 @@
+$azulhf: #69f2d2ec;
+
+$font: "Edu NSW ACT Hand Pre", cursive;
+
+// extend
+.boton-verde {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fa3c23f4;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    background-color: #3ae553;
+}
+
+.boton-naranja {
+    @extend .boton-verde;
+    background-color: #ec1919;
+    color: #0e0e0ef4;
+}
+
+//mixin
+
+@mixin tarjetah {
+
+    margin: 20px;
+    padding: 25px;
+
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

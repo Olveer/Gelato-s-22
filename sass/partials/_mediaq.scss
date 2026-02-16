@@ -1,0 +1,219 @@
+/* mobile */
+
+@media (max-width:480px) {
+
+
+    /*generales*/
+
+
+
+
+    h1 {
+        color: rgb(3, 63, 63);
+        font-size: larger;
+        text-shadow: -7px 4px 4px rgba(181, 178, 224, 0.6);
+        margin: 10px;
+
+    }
+
+    h3 {
+        font-size: medium;
+        margin: 30px;
+        border-radius: 15px;
+    }
+
+    h2 {
+        font-size: large;
+        text-align: center;
+        text-shadow: -1px 4px 13px rgba(255, 255, 255, 1);
+
+        border-radius: 15px;
+    }
+
+    /*header y footer */
+
+
+    header {
+
+
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        nav {
+
+            width: 70%;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    font-size: x-small;
+                }
+
+            }
+
+        }
+
+    }
+
+
+
+
+
+    footer {
+        font-size: small;
+
+        img {
+            width: 10%;
+        }
+    }
+
+
+
+    /*page de index*/
+
+    .container-grid {
+
+        display: grid;
+        grid-template-areas:
+            "titulo"
+            "titulo1"
+            "img-in"
+            "texto3"
+            "gela"
+            "titulo2"
+            "promo-in"
+            "arandanos "
+            "maracuya"
+            "coffe"
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+        column-gap: 5px;
+        row-gap: 5px;
+        padding: 5px;
+    }
+
+    /* page helados */
+
+    .migrid {
+        display: grid;
+        grid-template-areas:
+            "tipos"
+            "clasicos"
+            "chocolate1"
+            "fresa"
+            "vainilla"
+            "variados"
+            " cook "
+            "limon"
+            " ron"
+            " nuevos"
+            "pistacho"
+            "almendras"
+            "menta"
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto;
+
+        h1 {
+            font-size: larger;
+        }
+
+        h2 {
+            font-size: large;
+        }
+
+        h3 {
+            font-size: medium;
+        }
+    }
+
+
+    /* page soporte */
+
+
+
+
+    .main-sopor {
+        padding: 30px 20px;
+        margin: 10px 0;
+
+
+        .flex-carru {
+            display: grid;
+            grid-template-areas:
+                "carru "
+                "tex"
+            ;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            height: 50%;
+
+
+        }
+
+
+    }
+
+    .formu {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+
+        form {
+
+            width: 100% !important;
+            max-width: 100% !important;
+            padding: 20px;
+            margin: 0;
+            box-sizing: border-box;
+
+
+            .hf {
+                width: 100% !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                box-sizing: border-box;
+
+
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+
+
+                font-size: 18px;
+
+
+                word-break: normal;
+                overflow-wrap: normal;
+                white-space: nowrap;
+
+
+                display: block;
+                margin: 0px 0px;
+                text-align: justify;
+
+
+            }
+
+
+
+            .f {
+                width: 100%;
+
+                textarea,
+                input {
+                    width: 100% !important;
+                    max-width: 100%;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,84 @@
+//estilos exclusivos de main en soporte
+
+/* page de soporte */
+
+.main-sopor {
+
+
+    .flex-carru {
+        display: grid;
+        grid-template-areas:
+            "carru tex"
+        ;
+        grid-template-columns: 0.5fr 0.5fr;
+        grid-template-rows: 1fr;
+        padding: 20px;
+
+
+        .k2 {
+            grid-area: carru;
+
+        }
+
+        .tex {
+            grid-area: tex;
+            padding: 20px;
+        }
+    }
+
+    .formu {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        form {
+            padding: 50px 55px;
+            margin: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            text-align: center;
+            width: 440px;
+
+
+            .hf {
+                color: #283629;
+                font-size: 35px;
+            }
+
+            .f {
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+
+                label {
+                    color: #283629;
+                    font-size: 15px;
+                    font-weight: 600;
+                    margin-bottom: 15px;
+                }
+
+                textarea {
+                    padding: 17px 23px;
+                    border-radius: 24px;
+                    margin-bottom: 20px;
+                    outline: none;
+                    border: 2px solid #e7cbcb;
+                    background-color: #ece3e3;
+                }
+
+                input {
+                    padding: 17px 23px;
+                    border-radius: 24px;
+                    margin-bottom: 20px;
+                    outline: none;
+                    border: 2px solid #e7cbcb;
+                    background-color: #ece3e3;
+                }
+            }
+        }
+    }
+
+
+}

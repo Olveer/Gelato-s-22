@@ -1,0 +1,512 @@
+@import url("https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Edu+NSW+ACT+Hand+Pre:wght@400..700&display=swap");
+.boton-verde, .migrid .chocolate span, .migrid .vainilla span, .migrid .fresa span, .migrid .limon span, .migrid .ron-pasas span, .migrid .cookies-and-cream span, .migrid .pistacho span, .migrid .almendras span, .migrid .menta span, .boton-naranja, .container-grid .arandanos span, .container-grid .maracuya span, .container-grid .coffe span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgba(250, 60, 35, 0.9568627451);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  background-color: #3ae553;
+}
+
+.boton-naranja, .container-grid .arandanos span, .container-grid .maracuya span, .container-grid .coffe span {
+  background-color: #ec1919;
+  color: rgba(14, 14, 14, 0.9568627451);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*font-family: "Edu NSW ACT Hand Pre", cursive;*/
+body {
+  font-family: "Edu NSW ACT Hand Pre", cursive;
+  text-align: center;
+  background-color: rgb(203, 234, 244);
+}
+
+img {
+  width: 220px;
+  height: 350px;
+  border-radius: 10px;
+}
+
+h1 {
+  color: #0C2340;
+  font-size: 3rem;
+  text-shadow: -7px 4px 4px rgba(181, 178, 224, 0.6);
+  margin: 30px;
+  transition: 3s;
+  animation-name: luz;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+}
+
+@keyframes luz {
+  0% {
+    transform: translateX(30px);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+h1:hover {
+  color: rgba(78, 156, 156, 0.712);
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 30px;
+  border-radius: 15px;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: -1px 4px 13px rgb(255, 255, 255);
+  margin: 30px;
+  border-radius: 15px;
+}
+
+/*header */
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(105, 242, 210, 0.9254901961);
+  width: 100%;
+}
+header img {
+  margin: 10px;
+  width: 180px;
+  height: 180px;
+  padding: 5px;
+}
+header nav {
+  width: 60%;
+  margin-right: 30px;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: rgb(0, 30, 39);
+  font-size: 1.7rem;
+}
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(105, 242, 210, 0.9254901961);
+  align-items: center;
+}
+footer img {
+  width: 80px;
+  height: auto;
+}
+
+/* page de index */
+.container-grid {
+  display: grid;
+  grid-template-areas: "titulo      titulo     titulo" "img-in      titulo1    titulo1" "img-in      texto3     gela  " "img-in      texto3      gela  " "img-in     titulo2    titulo2" ".   promo-in   . " "arandanos    maracuya    coffe";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto auto;
+  column-gap: 5px;
+  row-gap: 5px;
+  padding: 5px;
+}
+.container-grid img {
+  width: 95%;
+  height: 100%;
+}
+.container-grid .titulo {
+  grid-area: titulo;
+}
+.container-grid .titulo1 {
+  grid-area: titulo1;
+}
+.container-grid .img-in {
+  grid-area: img-in;
+  border-radius: 10px;
+}
+.container-grid .texto3 {
+  grid-area: texto3;
+}
+.container-grid .gela {
+  grid-area: gela;
+  border-radius: 10px;
+}
+.container-grid .titulo2 {
+  grid-area: titulo2;
+}
+.container-grid .promo-in {
+  grid-area: promo-in;
+  background-color: rgb(239, 238, 239);
+  color: #DEB80B;
+  animation-name: efecto;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+}
+@keyframes efecto {
+  0% {
+    color: #f07a25;
+    transform: translateX(10px);
+  }
+  25% {
+    color: #e27676;
+    transform: scaleX(1);
+  }
+  50% {
+    color: #ff0101;
+    transform: rotate(-10deg);
+  }
+  75% {
+    color: #e27676;
+    transform: translateY(10px);
+  }
+  100% {
+    color: #f07a25;
+    transform: rotate(10deg);
+  }
+}
+.container-grid .arandanos {
+  margin: 20px;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: arandanos;
+  background-color: #0C2340;
+}
+.container-grid .maracuya {
+  margin: 20px;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: maracuya;
+  background-color: #DEB80B;
+}
+.container-grid .coffe {
+  margin: 20px;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: coffe;
+  background-color: #6F4E37;
+}
+/*page helados */
+.migrid {
+  display: grid;
+  grid-template-areas: "   tipos    tipos      tipos " "    .       clasicos     .  " "chocolate1  vainilla    fresa" "    .       variados     .  " "  cook      limon       ron  " "   .        nuevos      .  " "pistacho    almendras   menta";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
+}
+.migrid .tipos {
+  grid-area: tipos;
+  text-align: center;
+}
+.migrid .clasicos {
+  grid-area: clasicos;
+  background-color: rgba(0, 253, 122, 0.7215686275);
+}
+.migrid .chocolate {
+  margin: 20px;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(145, 145, 107);
+  grid-area: chocolate1;
+}
+.migrid .vainilla {
+  margin: 20px;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255, 255, 182);
+  grid-area: vainilla;
+}
+.migrid .fresa {
+  margin: 20px;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e8aeae;
+  grid-area: fresa;
+}
+.migrid .variados {
+  background-color: #F5D2D2;
+  grid-area: variados;
+}
+.migrid .limon {
+  margin: 20px;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #D9E542;
+  grid-area: limon;
+}
+.migrid .limon img {
+  height: 320px;
+  width: 200px;
+}
+.migrid .ron-pasas {
+  margin: 20px;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #45383b;
+  grid-area: ron;
+}
+.migrid .cookies-and-cream {
+  margin: 20px;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: blanchedalmond;
+  grid-area: cook;
+}
+.migrid .nuevos {
+  grid-area: nuevos;
+  background-color: #D9E542;
+}
+.migrid .pistacho {
+  margin: 20px;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #628141;
+  grid-area: pistacho;
+}
+.migrid .almendras {
+  margin: 20px;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #EED9C4;
+  grid-area: almendras;
+}
+.migrid .menta {
+  margin: 20px;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #12d3d3;
+  grid-area: menta;
+}
+/* page de soporte */
+.main-sopor .flex-carru {
+  display: grid;
+  grid-template-areas: "carru tex";
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-rows: 1fr;
+  padding: 20px;
+}
+.main-sopor .flex-carru .k2 {
+  grid-area: carru;
+}
+.main-sopor .flex-carru .tex {
+  grid-area: tex;
+  padding: 20px;
+}
+.main-sopor .formu {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-sopor .formu form {
+  padding: 50px 55px;
+  margin: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  text-align: center;
+  width: 440px;
+}
+.main-sopor .formu form .hf {
+  color: #283629;
+  font-size: 35px;
+}
+.main-sopor .formu form .f {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.main-sopor .formu form .f label {
+  color: #283629;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.main-sopor .formu form .f textarea {
+  padding: 17px 23px;
+  border-radius: 24px;
+  margin-bottom: 20px;
+  outline: none;
+  border: 2px solid #e7cbcb;
+  background-color: #ece3e3;
+}
+.main-sopor .formu form .f input {
+  padding: 17px 23px;
+  border-radius: 24px;
+  margin-bottom: 20px;
+  outline: none;
+  border: 2px solid #e7cbcb;
+  background-color: #ece3e3;
+}
+
+/* mobile */
+@media (max-width: 480px) {
+  /*generales*/
+  h1 {
+    color: rgb(3, 63, 63);
+    font-size: larger;
+    text-shadow: -7px 4px 4px rgba(181, 178, 224, 0.6);
+    margin: 10px;
+  }
+  h3 {
+    font-size: medium;
+    margin: 30px;
+    border-radius: 15px;
+  }
+  h2 {
+    font-size: large;
+    text-align: center;
+    text-shadow: -1px 4px 13px rgb(255, 255, 255);
+    border-radius: 15px;
+  }
+  /*header y footer */
+  header {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  header nav {
+    width: 70%;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+  header nav ul a {
+    font-size: x-small;
+  }
+  footer {
+    font-size: small;
+  }
+  footer img {
+    width: 10%;
+  }
+  /*page de index*/
+  .container-grid {
+    display: grid;
+    grid-template-areas: "titulo" "titulo1" "img-in" "texto3" "gela" "titulo2" "promo-in" "arandanos " "maracuya" "coffe";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+    column-gap: 5px;
+    row-gap: 5px;
+    padding: 5px;
+  }
+  /* page helados */
+  .migrid {
+    display: grid;
+    grid-template-areas: "tipos" "clasicos" "chocolate1" "fresa" "vainilla" "variados" " cook " "limon" " ron" " nuevos" "pistacho" "almendras" "menta";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto;
+  }
+  .migrid h1 {
+    font-size: larger;
+  }
+  .migrid h2 {
+    font-size: large;
+  }
+  .migrid h3 {
+    font-size: medium;
+  }
+  /* page soporte */
+  .main-sopor {
+    padding: 30px 20px;
+    margin: 10px 0;
+  }
+  .main-sopor .flex-carru {
+    display: grid;
+    grid-template-areas: "carru " "tex";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 50%;
+  }
+  .formu {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .formu form {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .formu form .hf {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 18px;
+    word-break: normal;
+    overflow-wrap: normal;
+    white-space: nowrap;
+    display: block;
+    margin: 0px 0px;
+    text-align: justify;
+  }
+  .formu form .f {
+    width: 100%;
+  }
+  .formu form .f textarea,
+  .formu form .f input {
+    width: 100% !important;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/*# sourceMappingURL=stilos.css.map */

@@ -1,0 +1,162 @@
+//estilos exclusivos de main en helados
+@use "../partials/variables" as*;
+/*page helados */
+
+
+.migrid {
+
+    display: grid;
+    grid-template-areas:
+        "   tipos    tipos      tipos "
+        "    .       clasicos     .  "
+        "chocolate1  vainilla    fresa"
+        "    .       variados     .  "
+        "  cook      limon       ron  "
+        "   .        nuevos      .  "
+        "pistacho    almendras   menta"
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+
+    .tipos {
+        grid-area: tipos;
+        text-align: center;
+
+
+    }
+
+    .clasicos {
+
+        grid-area: clasicos;
+        background-color: #00fd7ab8;
+    }
+
+    .chocolate {
+        @include tarjetah;
+        background-color: rgb(145, 145, 107);
+
+        grid-area: chocolate1;
+
+
+        span {
+            @extend .boton-verde;
+        }
+    }
+
+    .vainilla {
+        @include tarjetah;
+
+        background-color: rgb(255, 255, 182);
+
+        grid-area: vainilla;
+
+
+        span {
+            @extend .boton-verde;
+        }
+    }
+
+    .fresa {
+        @include tarjetah;
+
+        background-color: #e8aeae;
+
+        grid-area: fresa;
+
+        span {
+            @extend .boton-verde;
+        }
+    }
+
+    .variados {
+        background-color: #F5D2D2;
+        grid-area: variados;
+    }
+
+
+    .limon {
+        @include tarjetah;
+        background-color: #D9E542;
+
+        grid-area: limon;
+
+
+        img {
+            height: 320px;
+            width: 200px;
+        }
+
+        span {
+            @extend .boton-verde;
+        }
+    }
+
+    .ron-pasas {
+        @include tarjetah;
+        background-color: #45383b;
+
+        grid-area: ron;
+
+
+        span {
+            @extend .boton-verde;
+        }
+    }
+
+    .cookies-and-cream {
+        @include tarjetah;
+        background-color: blanchedalmond;
+
+        grid-area: cook;
+
+
+
+        span {
+            @extend .boton-verde;
+        }
+    }
+
+    .nuevos {
+        grid-area: nuevos;
+        background-color: #D9E542;
+    }
+
+
+
+
+    .pistacho {
+        @include tarjetah;
+        background-color: #628141;
+
+        grid-area: pistacho;
+
+        span {
+            @extend .boton-verde;
+        }
+    }
+
+    .almendras {
+        @include tarjetah;
+        background-color: #EED9C4;
+
+        grid-area: almendras;
+
+
+        span {
+            @extend .boton-verde;
+        }
+    }
+
+    .menta {
+        @include tarjetah;
+        background-color: #12d3d3;
+
+        grid-area: menta;
+
+
+        span {
+            @extend .boton-verde;
+        }
+
+    }
+}
