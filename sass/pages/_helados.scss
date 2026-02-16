@@ -94,7 +94,7 @@
     .ron-pasas {
         @include tarjetah;
         background-color: #45383b;
-        color: rgb(255, 255, 255);
+        color: rgb(255, 255, 255) !important;
 
         grid-area: ron;
 

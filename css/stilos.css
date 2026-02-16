@@ -283,7 +283,7 @@ footer img {
   flex-direction: column;
   align-items: center;
   background-color: #45383b;
-  color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255) !important;
   grid-area: ron;
 }
 .migrid .cookies-and-cream {
