@@ -109,6 +109,7 @@
         @include tarjetah;
         grid-area: arandanos;
         background-color: #0C2340;
+        color: rgb(251, 251, 251);
 
         span {
             @extend .boton-naranja;

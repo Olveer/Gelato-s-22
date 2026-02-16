@@ -190,6 +190,7 @@ footer img {
   align-items: center;
   grid-area: arandanos;
   background-color: #0C2340;
+  color: rgb(251, 251, 251);
 }
 .container-grid .maracuya {
   margin: 20px;
@@ -282,6 +283,7 @@ footer img {
   flex-direction: column;
   align-items: center;
   background-color: #45383b;
+  color: rgb(255, 255, 255);
   grid-area: ron;
 }
 .migrid .cookies-and-cream {
