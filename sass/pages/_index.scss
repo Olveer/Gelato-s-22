@@ -34,6 +34,7 @@
     }
 
 
+
     .titulo1 {
         grid-area: titulo1;
     }
@@ -41,7 +42,9 @@
     .img-in {
         grid-area: img-in;
         border-radius: 10px;
+
     }
+
 
     .texto3 {
         grid-area: texto3;
@@ -59,12 +62,10 @@
 
     .promo-in {
         grid-area: promo-in;
-        background-color: rgb(239, 238, 239);
         color: #DEB80B;
         animation-name: efecto;
         animation-duration: 6s;
         animation-iteration-count: infinite;
-
         animation-delay: 2s;
 
     }
@@ -109,11 +110,15 @@
         @include tarjetah;
         grid-area: arandanos;
         background-color: #0C2340;
-        color: rgb(251, 251, 251);
 
         span {
             @extend .boton-naranja;
         }
+
+        .fondo-p {
+            color: rgb(255, 255, 255)
+        }
+
     }
 
 
@@ -126,6 +131,8 @@
         span {
             @extend .boton-naranja;
         }
+
+
     }
 
 
@@ -137,12 +144,11 @@
         span {
             @extend .boton-naranja;
         }
+
+        .fondo-p {
+            color: rgb(255, 255, 255)
+        }
+
+
     }
-
-
-
-
-
-
-
 }

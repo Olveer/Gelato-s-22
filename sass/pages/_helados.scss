@@ -33,13 +33,17 @@
 
     .chocolate {
         @include tarjetah;
-        background-color: rgb(145, 145, 107);
+        background-color: rgb(131, 110, 78);
 
         grid-area: chocolate1;
 
 
         span {
             @extend .boton-verde;
+        }
+
+        .fondo-p {
+            color: rgb(255, 255, 255)
         }
     }
 
@@ -59,7 +63,7 @@
     .fresa {
         @include tarjetah;
 
-        background-color: #e8aeae;
+        background-color: #f0cdcd;
 
         grid-area: fresa;
 
@@ -67,6 +71,7 @@
             @extend .boton-verde;
         }
     }
+
 
     .variados {
         background-color: #F5D2D2;
@@ -76,7 +81,7 @@
 
     .limon {
         @include tarjetah;
-        background-color: #D9E542;
+        background-color: #f6ff7a;
 
         grid-area: limon;
 
@@ -93,8 +98,8 @@
 
     .ron-pasas {
         @include tarjetah;
-        background-color: #45383b;
-        color: rgb(255, 255, 255) !important;
+        background-color: #ad838c;
+
 
         grid-area: ron;
 
@@ -102,6 +107,8 @@
         span {
             @extend .boton-verde;
         }
+
+
     }
 
     .cookies-and-cream {
@@ -127,7 +134,7 @@
 
     .pistacho {
         @include tarjetah;
-        background-color: #628141;
+        background-color: #a2d66a;
 
         grid-area: pistacho;
 
@@ -150,7 +157,7 @@
 
     .menta {
         @include tarjetah;
-        background-color: #12d3d3;
+        background-color: #63fdfd;
 
         grid-area: menta;
 

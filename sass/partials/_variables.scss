@@ -10,14 +10,16 @@ $font: "Edu NSW ACT Hand Pre", cursive;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 4px;
-    background-color: #3ae553;
+    background-color: #74ef78;
 }
 
 .boton-naranja {
     @extend .boton-verde;
-    background-color: #ec1919;
+    background-color: #e8643f;
     color: #0e0e0ef4;
 }
+
+
 
 //mixin
 

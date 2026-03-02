@@ -6,11 +6,11 @@
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 4px;
-  background-color: #3ae553;
+  background-color: #74ef78;
 }
 
 .boton-naranja, .container-grid .arandanos span, .container-grid .maracuya span, .container-grid .coffe span {
-  background-color: #ec1919;
+  background-color: #e8643f;
   color: rgba(14, 14, 14, 0.9568627451);
 }
 
@@ -24,7 +24,7 @@
 body {
   font-family: "Edu NSW ACT Hand Pre", cursive;
   text-align: center;
-  background-color: rgb(203, 234, 244);
+  background-color: rgb(241, 247, 249);
 }
 
 img {
@@ -152,7 +152,6 @@ footer img {
 }
 .container-grid .promo-in {
   grid-area: promo-in;
-  background-color: rgb(239, 238, 239);
   color: #DEB80B;
   animation-name: efecto;
   animation-duration: 6s;
@@ -190,7 +189,9 @@ footer img {
   align-items: center;
   grid-area: arandanos;
   background-color: #0C2340;
-  color: rgb(251, 251, 251);
+}
+.container-grid .arandanos .fondo-p {
+  color: rgb(255, 255, 255);
 }
 .container-grid .maracuya {
   margin: 20px;
@@ -212,6 +213,10 @@ footer img {
   grid-area: coffe;
   background-color: #6F4E37;
 }
+.container-grid .coffe .fondo-p {
+  color: rgb(255, 255, 255);
+}
+
 /*page helados */
 .migrid {
   display: grid;
@@ -234,8 +239,11 @@ footer img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(145, 145, 107);
+  background-color: rgb(131, 110, 78);
   grid-area: chocolate1;
+}
+.migrid .chocolate .fondo-p {
+  color: rgb(255, 255, 255);
 }
 .migrid .vainilla {
   margin: 20px;
@@ -254,7 +262,7 @@ footer img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #e8aeae;
+  background-color: #f0cdcd;
   grid-area: fresa;
 }
 .migrid .variados {
@@ -268,7 +276,7 @@ footer img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #D9E542;
+  background-color: #f6ff7a;
   grid-area: limon;
 }
 .migrid .limon img {
@@ -282,8 +290,7 @@ footer img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #45383b;
-  color: rgb(255, 255, 255) !important;
+  background-color: #ad838c;
   grid-area: ron;
 }
 .migrid .cookies-and-cream {
@@ -307,7 +314,7 @@ footer img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #628141;
+  background-color: #a2d66a;
   grid-area: pistacho;
 }
 .migrid .almendras {
@@ -327,7 +334,7 @@ footer img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #12d3d3;
+  background-color: #63fdfd;
   grid-area: menta;
 }
 /* page de soporte */
