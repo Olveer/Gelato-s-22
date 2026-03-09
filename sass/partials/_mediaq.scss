@@ -1,12 +1,9 @@
 /* mobile */
 
-@media (max-width:480px) {
+@media (max-width:600px) {
 
 
     /*generales*/
-
-
-
 
     h1 {
         color: rgb(3, 63, 63);
@@ -41,26 +38,34 @@
         flex-wrap: wrap;
 
         nav {
+            margin-right: 0px;
 
-            width: 70%;
+            width: 90%;
+            justify-content: center;
 
             ul {
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
+                justify-content: space-between;
+                padding-left: 0px;
 
                 a {
-                    font-size: x-small;
+                    font-size: 1.2rem !important;
                 }
 
             }
 
         }
 
+
+        img {
+            width: 150px;
+            height: 150px;
+            margin: 0px;
+            padding: 0px;
+        }
+
     }
-
-
-
-
 
     footer {
         font-size: small;
@@ -70,8 +75,6 @@
         }
     }
 
-
-
     /*page de index*/
 
     .container-grid {
@@ -79,21 +82,83 @@
         display: grid;
         grid-template-areas:
             "titulo"
-            "titulo1"
-            "img-in"
-            "texto3"
-            "gela"
             "titulo2"
             "promo-in"
             "arandanos "
             "maracuya"
             "coffe"
+            "titulo1"
+            "gela"
+            "texto3"
         ;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto auto 1fr auto;
         column-gap: 5px;
         row-gap: 5px;
         padding: 5px;
+
+        .fondo-pp {
+            display: none;
+        }
+
+
+        .gela {
+            border-radius: 20px;
+
+            background-color: rgb(247, 214, 242);
+            grid-area: gela;
+            display: grid;
+            grid-template-areas:
+
+                "h33"
+                "grup1 "
+                "grup2 "
+                "grup3";
+            grid-template-columns: auto;
+            grid-template-rows: auto 1fr 1fr 1fr;
+            row-gap: 10px;
+            justify-content: center;
+
+
+            .h33 {
+                grid-area: h33;
+            }
+
+            .grup1 {
+                grid-area: grup1;
+            }
+
+            .grup2 {
+                grid-area: grup2;
+
+            }
+
+            .grup3 {
+                grid-area: grup3;
+
+            }
+
+            .grup4 {
+                display: none;
+            }
+
+            .grup5 {
+                display: none;
+
+            }
+
+            .grup6 {
+                display: none;
+
+            }
+
+            img {
+                width: 100%;
+                height: 350px;
+
+            }
+
+        }
     }
 
     /* page helados */
@@ -129,12 +194,14 @@
         h3 {
             font-size: medium;
         }
+
+        .fondo-pp {
+            display: none;
+        }
     }
 
 
     /* page soporte */
-
-
 
 
     .main-sopor {
@@ -151,6 +218,10 @@
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
             height: 50%;
+
+            .tex {
+                line-height: 1.2;
+            }
 
 
         }
@@ -214,6 +285,248 @@
             }
         }
     }
+
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+
+    /*header y footer */
+    header {
+
+        nav {
+
+            margin: 20px;
+            width: 90%;
+            justify-content: center;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                a {
+                    font-size: 1.1rem !important;
+                    font-weight: 750;
+                }
+
+            }
+
+        }
+
+
+        img {
+            width: 150px;
+            height: 150px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+    }
+
+
+    /*page de index*/
+
+    .container-grid {
+
+        display: grid;
+        grid-template-areas:
+            "titulo titulo  "
+            "titulo2 titulo2 "
+            "promo-in promo-in "
+            "arandanos coffe "
+            " maracuya maracuya"
+            "titulo1 titulo1"
+            "gela gela"
+            "texto3 texto3"
+        ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto auto 1fr auto;
+        column-gap: 5px;
+        row-gap: 5px;
+        padding: 5px;
+
+        .fondo-pp {
+            display: none;
+        }
+
+
+        .gela {
+            border-radius: 20px;
+
+            background-color: rgb(227, 181, 210);
+            grid-area: gela;
+            display: grid;
+            grid-template-areas:
+
+                "h33 h33 "
+                " grup1 grup2"
+                "grup3  grup4 "
+                "grup5 grup6";
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto 1fr 1fr 1fr;
+            row-gap: 10px;
+            justify-content: center;
+
+
+            .h33 {
+                grid-area: h33;
+            }
+
+            .grup1 {
+                grid-area: grup1;
+            }
+
+            .grup2 {
+                grid-area: grup2;
+
+            }
+
+            .grup3 {
+                grid-area: grup3;
+
+            }
+
+            .grup4 {
+                display: grup4;
+            }
+
+            .grup5 {
+                display: grup5;
+
+            }
+
+            .grup6 {
+                display: grup6;
+
+            }
+
+            img {
+                width: 100%;
+                height: 350px;
+
+            }
+
+        }
+    }
+
+    /* page helados */
+
+    .migrid {
+        display: grid;
+        grid-template-areas:
+            "tipos tipos"
+            "clasicos clasicos"
+            "vainilla fresa "
+            "chocolate1 chocolate1 "
+            "variados variados"
+            "cook limon "
+            " ron ron "
+            " nuevos nuevos"
+            "pistacho almendras"
+            "menta menta"
+        ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+
+
+        h1{
+            font-size: 2rem;
+        }
+
+
+        .fondo-pp {
+            display: none;
+        }
+    }
+
+
+    /* page soporte */
+
+
+    .main-sopor {
+        padding: 30px 20px;
+        margin: 10px 0;
+
+
+        .flex-carru {
+            display: grid;
+            grid-template-areas:
+                "carru "
+                "tex"
+            ;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            height: 50%;
+
+            .tex {
+                line-height: 1.5;
+            }
+
+
+        }
+
+
+    }
+
+    .formu {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+
+        form {
+
+            width: 60% !important;
+
+            padding: 20px;
+            margin: 0;
+            box-sizing: border-box;
+
+
+            .hf {
+                width: 100% !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                box-sizing: border-box;
+
+
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+
+
+                font-size: 18px;
+
+
+                word-break: normal;
+                overflow-wrap: normal;
+                white-space: nowrap;
+
+
+                display: block;
+                margin: 0px 0px;
+                text-align: justify;
+
+
+            }
+
+
+
+            .f {
+                width: 100%;
+
+                textarea,
+                input {
+                    width: 100% !important;
+                    max-width: 100%;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+
+
+
 
 
 }

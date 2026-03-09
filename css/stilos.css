@@ -3,15 +3,19 @@
   font-size: 1.5rem;
   font-weight: bold;
   color: rgba(250, 60, 35, 0.9568627451);
-  padding: 10px;
+  padding: 2px;
   border-radius: 10px;
-  margin-bottom: 4px;
   background-color: #74ef78;
+  margin: 6px;
 }
 
 .boton-naranja, .container-grid .arandanos span, .container-grid .maracuya span, .container-grid .coffe span {
   background-color: #e8643f;
   color: rgba(14, 14, 14, 0.9568627451);
+}
+
+.picture, .container-grid .gela .grup1, .container-grid .gela .grup2, .container-grid .gela .grup3, .container-grid .gela .grup4, .container-grid .gela .grup5, .container-grid .gela .grup6 {
+  padding: 15px;
 }
 
 * {
@@ -21,16 +25,20 @@
 }
 
 /*font-family: "Edu NSW ACT Hand Pre", cursive;*/
+/* font-family: "Averia Gruesa Libre", system-ui;*/
 body {
-  font-family: "Edu NSW ACT Hand Pre", cursive;
+  font-weight: 600;
   text-align: center;
   background-color: rgb(241, 247, 249);
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  line-height: 1.6;
 }
 
 img {
   width: 220px;
   height: 350px;
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
 h1 {
@@ -43,6 +51,7 @@ h1 {
   animation-duration: 6s;
   animation-iteration-count: infinite;
   animation-delay: 2s;
+  font-family: "Edu NSW ACT Hand Pre", cursive;
 }
 
 @keyframes luz {
@@ -64,6 +73,7 @@ h3 {
   font-size: 1.5rem;
   margin: 30px;
   border-radius: 15px;
+  font-family: "Edu NSW ACT Hand Pre", cursive;
 }
 
 h2 {
@@ -72,6 +82,7 @@ h2 {
   text-shadow: -1px 4px 13px rgb(255, 255, 255);
   margin: 30px;
   border-radius: 15px;
+  font-family: "Edu NSW ACT Hand Pre", cursive;
 }
 
 /*header */
@@ -82,14 +93,13 @@ header {
   width: 100%;
 }
 header img {
-  margin: 10px;
+  margin-left: 6px;
   width: 180px;
   height: 180px;
-  padding: 5px;
 }
 header nav {
-  width: 60%;
-  margin-right: 30px;
+  width: 70%;
+  margin-right: 45px;
 }
 header nav ul {
   list-style: none;
@@ -100,7 +110,7 @@ header nav ul {
 }
 header nav ul li a {
   text-decoration: none;
-  color: rgb(0, 30, 39);
+  color: rgb(0, 0, 0);
   font-size: 1.7rem;
 }
 
@@ -119,14 +129,15 @@ footer img {
 /* page de index */
 .container-grid {
   display: grid;
-  grid-template-areas: "titulo      titulo     titulo" "img-in      titulo1    titulo1" "img-in      texto3     gela  " "img-in      texto3      gela  " "img-in     titulo2    titulo2" ".   promo-in   . " "arandanos    maracuya    coffe";
+  grid-template-areas: "titulo      titulo     titulo" "  titulo2   titulo2    titulo2" ".   promo-in   . " "arandanos    maracuya    coffe   " "    titulo1  titulo1 titulo1   " "gela gela gela  " "texto3 texto3 texto3";
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto 0.5fr;
   column-gap: 5px;
   row-gap: 5px;
   padding: 5px;
 }
 .container-grid img {
+  padding: 7px;
   width: 95%;
   height: 100%;
 }
@@ -135,20 +146,47 @@ footer img {
 }
 .container-grid .titulo1 {
   grid-area: titulo1;
-}
-.container-grid .img-in {
-  grid-area: img-in;
-  border-radius: 10px;
-}
-.container-grid .texto3 {
-  grid-area: texto3;
+  padding: 25px;
 }
 .container-grid .gela {
+  margin: 30px;
   grid-area: gela;
-  border-radius: 10px;
+  display: grid;
+  grid-template-areas: "h33 h33 h33" "grup1 grup2 grup3" "grup4 grup5 grup6";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  column-gap: 1px;
+  row-gap: 15px;
+  justify-content: center;
+}
+.container-grid .gela .h33 {
+  grid-area: h33;
+}
+.container-grid .gela .grup1 {
+  grid-area: grup1;
+}
+.container-grid .gela .grup2 {
+  grid-area: grup2;
+}
+.container-grid .gela .grup3 {
+  grid-area: grup3;
+}
+.container-grid .gela .grup4 {
+  grid-area: grup4;
+}
+.container-grid .gela .grup5 {
+  grid-area: grup5;
+}
+.container-grid .gela .grup6 {
+  grid-area: grup6;
+}
+.container-grid .gela img {
+  width: 100%;
+  height: 400px;
 }
 .container-grid .titulo2 {
   grid-area: titulo2;
+  padding: 25px;
 }
 .container-grid .promo-in {
   grid-area: promo-in;
@@ -156,7 +194,7 @@ footer img {
   animation-name: efecto;
   animation-duration: 6s;
   animation-iteration-count: infinite;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 @keyframes efecto {
   0% {
@@ -183,7 +221,7 @@ footer img {
 .container-grid .arandanos {
   margin: 20px;
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -193,10 +231,13 @@ footer img {
 .container-grid .arandanos .fondo-p {
   color: rgb(255, 255, 255);
 }
+.container-grid .arandanos .fondo-pp {
+  color: rgb(255, 255, 255);
+}
 .container-grid .maracuya {
   margin: 20px;
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -206,7 +247,7 @@ footer img {
 .container-grid .coffe {
   margin: 20px;
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -215,6 +256,13 @@ footer img {
 }
 .container-grid .coffe .fondo-p {
   color: rgb(255, 255, 255);
+}
+.container-grid .coffe .fondo-pp {
+  color: rgb(255, 255, 255);
+}
+.container-grid .texto3 {
+  grid-area: texto3;
+  margin-bottom: 15px;
 }
 
 /*page helados */
@@ -235,7 +283,7 @@ footer img {
 .migrid .chocolate {
   margin: 20px;
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -245,10 +293,13 @@ footer img {
 .migrid .chocolate .fondo-p {
   color: rgb(255, 255, 255);
 }
+.migrid .chocolate .fondo-pp {
+  color: rgb(255, 255, 255);
+}
 .migrid .vainilla {
   margin: 20px;
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -258,7 +309,7 @@ footer img {
 .migrid .fresa {
   margin: 20px;
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -272,7 +323,7 @@ footer img {
 .migrid .limon {
   margin: 20px;
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -286,7 +337,7 @@ footer img {
 .migrid .ron-pasas {
   margin: 20px;
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -296,7 +347,7 @@ footer img {
 .migrid .cookies-and-cream {
   margin: 20px;
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -310,7 +361,7 @@ footer img {
 .migrid .pistacho {
   margin: 20px;
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -320,7 +371,7 @@ footer img {
 .migrid .almendras {
   margin: 20px;
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -330,7 +381,7 @@ footer img {
 .migrid .menta {
   margin: 20px;
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -351,6 +402,7 @@ footer img {
 .main-sopor .flex-carru .tex {
   grid-area: tex;
   padding: 20px;
+  line-height: 3;
 }
 .main-sopor .formu {
   min-height: 100vh;
@@ -399,7 +451,7 @@ footer img {
 }
 
 /* mobile */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   /*generales*/
   h1 {
     color: rgb(3, 63, 63);
@@ -425,14 +477,24 @@ footer img {
     flex-wrap: wrap;
   }
   header nav {
-    width: 70%;
+    margin-right: 0px;
+    width: 90%;
+    justify-content: center;
   }
   header nav ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 0px;
   }
   header nav ul a {
-    font-size: x-small;
+    font-size: 1.2rem !important;
+  }
+  header img {
+    width: 150px;
+    height: 150px;
+    margin: 0px;
+    padding: 0px;
   }
   footer {
     font-size: small;
@@ -443,12 +505,51 @@ footer img {
   /*page de index*/
   .container-grid {
     display: grid;
-    grid-template-areas: "titulo" "titulo1" "img-in" "texto3" "gela" "titulo2" "promo-in" "arandanos " "maracuya" "coffe";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+    grid-template-areas: "titulo" "titulo2" "promo-in" "arandanos " "maracuya" "coffe" "titulo1" "gela" "texto3";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto auto 1fr auto;
     column-gap: 5px;
     row-gap: 5px;
     padding: 5px;
+  }
+  .container-grid .fondo-pp {
+    display: none;
+  }
+  .container-grid .gela {
+    border-radius: 20px;
+    background-color: rgb(247, 214, 242);
+    grid-area: gela;
+    display: grid;
+    grid-template-areas: "h33" "grup1 " "grup2 " "grup3";
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr 1fr 1fr;
+    row-gap: 10px;
+    justify-content: center;
+  }
+  .container-grid .gela .h33 {
+    grid-area: h33;
+  }
+  .container-grid .gela .grup1 {
+    grid-area: grup1;
+  }
+  .container-grid .gela .grup2 {
+    grid-area: grup2;
+  }
+  .container-grid .gela .grup3 {
+    grid-area: grup3;
+  }
+  .container-grid .gela .grup4 {
+    display: none;
+  }
+  .container-grid .gela .grup5 {
+    display: none;
+  }
+  .container-grid .gela .grup6 {
+    display: none;
+  }
+  .container-grid .gela img {
+    width: 100%;
+    height: 350px;
   }
   /* page helados */
   .migrid {
@@ -466,6 +567,9 @@ footer img {
   .migrid h3 {
     font-size: medium;
   }
+  .migrid .fondo-pp {
+    display: none;
+  }
   /* page soporte */
   .main-sopor {
     padding: 30px 20px;
@@ -478,6 +582,9 @@ footer img {
     grid-template-rows: 1fr;
     height: 50%;
   }
+  .main-sopor .flex-carru .tex {
+    line-height: 1.2;
+  }
   .formu {
     width: 100%;
     padding: 10px;
@@ -488,6 +595,143 @@ footer img {
   .formu form {
     width: 100% !important;
     max-width: 100% !important;
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .formu form .hf {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 18px;
+    word-break: normal;
+    overflow-wrap: normal;
+    white-space: nowrap;
+    display: block;
+    margin: 0px 0px;
+    text-align: justify;
+  }
+  .formu form .f {
+    width: 100%;
+  }
+  .formu form .f textarea,
+  .formu form .f input {
+    width: 100% !important;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 601px) and (max-width: 1000px) {
+  /*header y footer */
+  header nav {
+    margin: 20px;
+    width: 90%;
+    justify-content: center;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header nav ul a {
+    font-size: 1.1rem !important;
+    font-weight: 750;
+  }
+  header img {
+    width: 150px;
+    height: 150px;
+    margin: 0px;
+    padding: 0px;
+  }
+  /*page de index*/
+  .container-grid {
+    display: grid;
+    grid-template-areas: "titulo titulo  " "titulo2 titulo2 " "promo-in promo-in " "arandanos coffe " " maracuya maracuya" "titulo1 titulo1" "gela gela" "texto3 texto3";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto 1fr auto;
+    column-gap: 5px;
+    row-gap: 5px;
+    padding: 5px;
+  }
+  .container-grid .fondo-pp {
+    display: none;
+  }
+  .container-grid .gela {
+    border-radius: 20px;
+    background-color: rgb(227, 181, 210);
+    grid-area: gela;
+    display: grid;
+    grid-template-areas: "h33 h33 " " grup1 grup2" "grup3  grup4 " "grup5 grup6";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr;
+    row-gap: 10px;
+    justify-content: center;
+  }
+  .container-grid .gela .h33 {
+    grid-area: h33;
+  }
+  .container-grid .gela .grup1 {
+    grid-area: grup1;
+  }
+  .container-grid .gela .grup2 {
+    grid-area: grup2;
+  }
+  .container-grid .gela .grup3 {
+    grid-area: grup3;
+  }
+  .container-grid .gela .grup4 {
+    display: grup4;
+  }
+  .container-grid .gela .grup5 {
+    display: grup5;
+  }
+  .container-grid .gela .grup6 {
+    display: grup6;
+  }
+  .container-grid .gela img {
+    width: 100%;
+    height: 350px;
+  }
+  /* page helados */
+  .migrid {
+    display: grid;
+    grid-template-areas: "tipos tipos" "clasicos clasicos" "vainilla fresa " "chocolate1 chocolate1 " "variados variados" "cook limon " " ron ron " " nuevos nuevos" "pistacho almendras" "menta menta";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+  }
+  .migrid h1 {
+    font-size: 2rem;
+  }
+  .migrid .fondo-pp {
+    display: none;
+  }
+  /* page soporte */
+  .main-sopor {
+    padding: 30px 20px;
+    margin: 10px 0;
+  }
+  .main-sopor .flex-carru {
+    display: grid;
+    grid-template-areas: "carru " "tex";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 50%;
+  }
+  .main-sopor .flex-carru .tex {
+    line-height: 1.5;
+  }
+  .formu {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .formu form {
+    width: 60% !important;
     padding: 20px;
     margin: 0;
     box-sizing: border-box;

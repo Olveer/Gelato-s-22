@@ -4,26 +4,24 @@
 /* page de index */
 
 .container-grid {
-
-
-
     display: grid;
     grid-template-areas:
         "titulo      titulo     titulo"
-        "img-in      titulo1    titulo1"
-        "img-in      texto3     gela  "
-        "img-in      texto3      gela  "
-        "img-in     titulo2    titulo2"
+        "  titulo2   titulo2    titulo2"
         ".   promo-in   . "
-        "arandanos    maracuya    coffe";
+        "arandanos    maracuya    coffe   "
+        "    titulo1  titulo1 titulo1   "
+        "gela gela gela  "
+        "texto3 texto3 texto3"
+    ;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto 0.5fr;
     column-gap: 5px;
     row-gap: 5px;
     padding: 5px;
 
-
     img {
+        padding: 7px;
         width: 95%;
         height: 100%;
     }
@@ -33,30 +31,79 @@
         grid-area: titulo;
     }
 
-
-
     .titulo1 {
         grid-area: titulo1;
+        padding: 25px;
     }
 
-    .img-in {
-        grid-area: img-in;
-        border-radius: 10px;
-
-    }
-
-
-    .texto3 {
-        grid-area: texto3;
-    }
+    
 
     .gela {
+
+
+        margin: 30px;
         grid-area: gela;
-        border-radius: 10px;
+        display: grid;
+        grid-template-areas:
+
+            "h33 h33 h33"
+            "grup1 grup2 grup3"
+            "grup4 grup5 grup6";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 1fr 1fr;
+        column-gap: 1px;
+        row-gap: 15px;
+        justify-content: center;
+
+        .h33 {
+            grid-area: h33;
+        }
+
+        .grup1 {
+            grid-area: grup1;
+            @extend .picture;
+
+
+        }
+
+        .grup2 {
+            grid-area: grup2;
+            @extend .picture;
+        }
+
+        .grup3 {
+            grid-area: grup3;
+            @extend .picture;
+        }
+
+        .grup4 {
+            grid-area: grup4;
+            @extend .picture;
+
+        }
+
+        .grup5 {
+            grid-area: grup5;
+            @extend .picture;
+        }
+
+        .grup6 {
+            grid-area: grup6;
+            @extend .picture;
+        }
+
+        img {
+            width: 100%;
+            height: 400px;
+
+        }
+
     }
 
     .titulo2 {
         grid-area: titulo2;
+        padding: 25px;
+
     }
 
 
@@ -66,7 +113,7 @@
         animation-name: efecto;
         animation-duration: 6s;
         animation-iteration-count: infinite;
-        animation-delay: 2s;
+        animation-delay: 1s;
 
     }
 
@@ -119,6 +166,10 @@
             color: rgb(255, 255, 255)
         }
 
+        .fondo-pp {
+        color: rgb(255, 255, 255)
+    }
+
     }
 
 
@@ -148,6 +199,18 @@
         .fondo-p {
             color: rgb(255, 255, 255)
         }
+
+        .fondo-pp {
+        color: rgb(255, 255, 255)
+    }
+
+        
+    }
+
+
+    .texto3 {
+        grid-area: texto3;
+        margin-bottom: 15px;
 
 
     }
